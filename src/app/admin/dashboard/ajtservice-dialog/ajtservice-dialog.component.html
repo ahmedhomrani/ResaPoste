@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>Ajouter Services Formulaire</h1>
+<div mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>code postal du structure</mat-label>
+        <input matInput [(ngModel)]="services.codepostal" class="center-block" required>
+      </mat-form-field>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Comptes" id="flexCheckDefault" [(ngModel)]="services.Comptes">
+        <label class="form-check-label" for="Comptes">
+            Comptes
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="ChequesORV" id="flexCheckDefault" [(ngModel)]="services.ChequesORV">
+        <label class="form-check-label" for="ChequesORV">
+            Chéques /ORV
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Virements" id="flexCheckDefault" [(ngModel)]="services.Virements">
+        <label class="form-check-label" for="Virements">
+            Virements
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Placements" id="flexCheckDefault" [(ngModel)]="services.Placements">
+        <label class="form-check-label" for="Placements">
+            Placements
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Abonnements" id="flexCheckDefault" [(ngModel)]="services.Abonnements">
+        <label class="form-check-label" for="Abonnements">
+            Abonnements
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="Cartes" id="flexCheckDefault" [(ngModel)]="services.Cartes">
+        <label class="form-check-label" for="Cartes">
+            Cartes
+        </label>
+    </div>
+
+    <div id="btn">
+        <button type="submit" class="btn btn-warning" (click)="valider()" >Envoyer </button>
+    </div>
+      
+</div>

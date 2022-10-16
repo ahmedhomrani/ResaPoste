@@ -1,0 +1,45 @@
+<h1 mat-dialog-title>Ajouter Manager Formulaire</h1>
+<div mat-dialog-content>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>code postal</mat-label>
+            <input matInput [(ngModel)]="manager.codepostal" required>
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>nom manager</mat-label>
+            <input matInput [(ngModel)]="manager.nom" class="center-block" required>
+          </mat-form-field>
+        </div>
+    <div>
+    <mat-form-field appearance="fill">
+        <mat-label>email</mat-label>
+        <input matInput [(ngModel)]="manager.email" class="center-block" required>
+      </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>mot de passe</mat-label>
+            <input matInput [(ngModel)]="manager.password" required>
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Services</mat-label>
+            <mat-select [(ngModel)]="manager.service">
+              <mat-option value="comptes">comptes</mat-option>
+              <mat-option value="ChequesORV">ChequesORV</mat-option>
+              <mat-option value="Virements">Virements</mat-option>
+              <mat-option value="Placements">Placements</mat-option>
+              <mat-option value="Abonnements">Abonnements</mat-option>
+              <mat-option value="Cartes">Cartes</mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+    </div>
+    <div id="btn">
+        <button type="submit" class="btn btn-warning" (click)="valider()" >Envoyer </button>
+    </div>
+      
+</div>

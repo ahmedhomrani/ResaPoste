@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .mat-dialog-content {
+    flex-direction: column;
+    align-items: flex-start;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

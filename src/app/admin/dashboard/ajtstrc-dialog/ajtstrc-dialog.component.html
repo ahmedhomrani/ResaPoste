@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Ajouter Structure Formulaire</h1>
+<div mat-dialog-content>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Nom Structure</mat-label>
+            <input matInput [(ngModel)]="structure.Nom" required>
+          </mat-form-field>
+    </div>
+    <div>
+
+        <!-- gouvernorat liste déroulante -->
+    <mat-form-field appearance="fill">
+        <mat-label>adresse</mat-label>
+        <input matInput [(ngModel)]="structure.adresse" class="center-block" required>
+      </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Code postal</mat-label>
+            <input matInput [(ngModel)]="structure.codepostal" required>
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Telephone</mat-label>
+            <input matInput [(ngModel)]="structure.tel" required>
+          </mat-form-field>
+    </div>
+    <div id="btn">
+        <button type="submit" class="btn btn-warning" (click)="valider()" >Envoyer </button>
+    </div>
+      
+</div>

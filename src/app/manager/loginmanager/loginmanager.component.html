@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="assets/images/poste.ico" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-6 contents">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="mb-4">
+                  <h3>Se Connecter</h3>
+                </div>
+                <form *ngIf="!isLoggedIn"
+                name="form"
+                (ngSubmit)="f.form.valid && onSubmit()"
+                #f="ngForm"
+                novalidate>
+                  <div class="form-group first">
+                    <!-- <label for="email">email</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  name="email"
+                  [(ngModel)]="form.email"
+                  required
+                  #email="ngModel"
+                  placeholder="email"
+                /><div
+                class="alert alert-danger"
+                role="alert"
+                *ngIf="email.errors && f.submitted"
+              >
+                email est obligatoire!
+              </div>
+                  </div>
+                  <div class="form-group last mb-4">
+                    <!-- <label for="password">Password</label> -->
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  [(ngModel)]="form.password"
+                  required
+                  minlength="3"
+                  #password="ngModel"
+                  placeholder="Password"
+                />
+                <div
+                  class="alert alert-danger"
+                  role="alert"
+                  *ngIf="password.errors && f.submitted"
+                >
+                    password est obligatoire!
+                </div>
+                  </div>
+                  
+                  <div class="d-flex mb-3 align-items-center">
+                    <label class="control control--checkbox mb-0"><span class="caption">Resté connecté</span>
+                      <input type="checkbox" checked="checked"/>
+                      <div class="control__indicator"></div>
+                    </label>
+                  </div>
+                  <input type="submit" value="Log In" class="btn btn-block btn-primary"><br><br>
+                </form>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      </div>
